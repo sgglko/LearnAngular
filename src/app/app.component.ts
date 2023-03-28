@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {HttpService} from "./http.service";
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,23 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'LearnAngular';
+  jsonValue= 'Hello World';
+
+
+
+  userObject = {
+    name: "Jonas",
+    age: "19",
+    id: 0
+  }
+
+  constructor(private httpService: HttpService) {
+  }
+
+  handleEvent(event: any) {
+    console.log(event);
+  }
+
+
+
 }
