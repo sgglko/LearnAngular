@@ -12,7 +12,7 @@ export class AppComponent {
 
 
   userObject = {
-    name: "Jonas",
+    name: "nicht Jonas",
     age: "19",
     id: 0
   }
