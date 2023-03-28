@@ -4,4 +4,12 @@
 <input placeholder="name" [(ngModel)]="userObject.name">
 <input placeholder="age" [(ngModel)]="userObject.age">
 <input placeholder="id" [(ngModel)]="userObject.id">
+<ng-container *ngIf="showUser">
 <app-user [user]="userObject" (userEvent)="handleEvent($event)"></app-user>
+</ng-container>
+
+<ul *ngFor="let item of (posts | async); let i=index">
+  <li>{{item.id}}</li>
+  <li>{{item.title}}</li>
+  <li>{{item.body}}</li>
+</ul>
